@@ -11,4 +11,4 @@ This project is called Library and is part of the Javascript Course of The Odin 
 With this project my idea is to check the Javascript Objects and Object Constructors skills that I have learned until now, as well as using it as an exercise to remember all the lessons until this point.
 
 ## If you are reading this
-Thank you for your interest! I'm still goin deeper in Javascript :0 
+Thank you for your interest! I'm still here, going deeper in Javascript :0 
