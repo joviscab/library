@@ -13,7 +13,7 @@
         <dialog>
             <button autofocus>Close</button>
             <p>Add a new book:</p>
-            <div>
+            <div id="book-form">
                 <label for="book-title">Book Title</label>
                 <input type="text" id="book-title" name="book-title">
             </div>
@@ -28,13 +28,13 @@
             <div>
                 <form action="">
                     <p>Have you read this book?</p>
-                    <input type="radio" name="book-read" id="book-read" value="yes"><br>
-                    <label for="yes">Yes</label><br>
-                    <input type="radio" name="book-read" id="book-notread" value="no"><br>
-                    <label for="no">No</label><br>
+                    <input type="radio" name="book-read" id="book-read-yes" value="Yes"><br>
+                    <label for="book-read-yes">Yes</label><br>
+                    <input type="radio" name="book-read" id="book-read-no" value="No"><br>
+                    <label for="book-read-no">No</label><br>
                 </form>
             </div>
-            <button id="submitNewBook">Submit</button>
+            <button type="submit" id="submitNewBook">Submit</button>
           </dialog>
           <button id="showDialogButton">New Book</button>
           
