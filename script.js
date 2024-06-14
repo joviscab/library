@@ -1,6 +1,37 @@
-//Function to store new books into an array
-const myLibrary = ['Lord of the Rings', 'The Hobbit', 'Zaratustra'];
+//Books array
+const myLibrary = [
+    {title: 'Lord of the Rings', author: 'J. R. R. Tolkien', pages: '1216', read: 'no'},
+    {title: 'The Hobbit', author: 'J. R. R. Tolkien', pages: '368', read: 'yes'},
+    {title: 'Thus Spoke Zarathustra', author: 'F. Nietzsche', pages: '352', read: 'no'},
+    ];
 
+//Function to loop through the array
+function showBooks() {
+    const libraryList = document.getElementById('libraryList');
+    libraryList.innerHTML = '';
+    myLibrary.forEach(function(book, index) {
+        const li = document.createElement('li');
+        li.textContent = `${book.title}, by ${book.author}, with ${book.pages} pages. The book was read: ${book.read}.`;
+        const markReadButton = document.createElement('button');
+        markReadButton.textContent = 'Mark as read';
+        markReadButton.addEventListener("click", () => {
+            myLibrary[3] = "yes";
+            showBooks();
+        });
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove Book';
+        removeButton.addEventListener("click", () => {
+            myLibrary.splice(index, 1);
+            showBooks();
+        });
+        li.appendChild(removeButton);
+        li.appendChild(markReadButton);
+        libraryList.appendChild(li);
+    });
+}
+
+showBooks();
+   
 //Constructor to add new books
 class Book {
     constructor(title, author, pages, read) {
@@ -9,7 +40,7 @@ class Book {
         this.pages = pages;
         this.read = read;
         this.info = function () {
-            let info = `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}.`;
+            let info = `${this.title}, ${this.author}, ${this.pages}, ${this.read}`;
             return info;
         };
     }
@@ -23,13 +54,19 @@ function addBookToLibrary(event) {
     const pages = document.getElementById('book-pages').value;
     const read = document.querySelector('input[name="book-read"]:checked').value;
     const newBook = new Book (title, author, pages, read);
-    myLibrary.push(newBook.info());
+    myLibrary.push(newBook);
     showBooks();
     document.getElementById('book-form').reset();
 
     const dialog = document.querySelector("dialog");
     dialog.close();
 }
+
+//Function to mark a book as read
+
+
+
+
 
 //Add form event listener
 const bookForm = document.getElementById('book-form');
@@ -49,24 +86,4 @@ closeButton.addEventListener("click", () => {
     dialog.close();
 });
 
-
-//Function to loop through the array
-function showBooks() {
-    const libraryList = document.getElementById('libraryList');
-    libraryList.innerHTML = '';
-    myLibrary.forEach(function(book, index) {
-        const li = document.createElement('li');
-        li.textContent = book;
-        const removeButton = document.createElement('button');
-        removeButton.textContent = 'Remove Book';
-        removeButton.addEventListener("click", () => {
-            myLibrary.splice(index, 1);
-            showBooks();
-        });
-        li.appendChild(removeButton);
-        libraryList.appendChild(li);
-    });
-}
-
-showBooks();
 
