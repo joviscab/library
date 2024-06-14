@@ -1,11 +1,97 @@
+@import '/modern-normalize.css';
+
 ::backdrop {
     background-image: linear-gradient(
       45deg,
-      magenta,
-      rebeccapurple,
-      dodgerblue,
-      green
+      #e2b659,
+      #b87c4c,
+      #7f4d3e,
+      #412728
     );
     opacity: 0.75;
   }
-  
+
+body {
+  background: url(library.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  font-family: 'Goudy Bookletter 1911', Times, serif;
+}
+
+body > h1 {
+  font-size: 4rem;
+  color: #e2b659;
+  background-color: #412728be;
+  display: flex;
+  justify-content: center;
+}
+
+#showDialogButton {
+  background-color: #412728dd;
+  color: #f9f871;
+  border-radius: 15px;
+  border: transparent;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+#showDialogButton:hover {
+  background-color: #7f4d3e;
+}
+
+#button-new {
+  display: flex;
+  justify-content: center;
+}
+
+#libraryList {
+  font-size: 1.5rem;
+  color: #e2b659;
+  background-color: #412728d1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mark-button {
+  background-color: #e2b659;
+  color: #412728;
+  border-radius: 5px;
+  border: transparent;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-left: 10px;
+}
+
+.remove-button {
+  background-color: #e2b659;
+  color: #412728;
+  border-radius: 5px;
+  border: transparent;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-left: 10px;
+}
+
+#close-button {
+  background-color: #e2b659;
+  color: #412728;
+  border-radius: 5px;
+  border: transparent;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-left: 10px;
+}
+
+#submitNewBook {
+  background-color: #e2b659;
+  color: #412728;
+  border-radius: 5px;
+  border: transparent;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-left: 10px;
+}
+

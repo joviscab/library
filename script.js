@@ -13,6 +13,7 @@ function showBooks() {
         const li = document.createElement('li');
         li.textContent = `${book.title}, by ${book.author}, with ${book.pages} pages. The book was read: ${book.read}.`;
         const markReadButton = document.createElement('button');
+        markReadButton.classList.add('mark-button');
         markReadButton.textContent = book.read === 'yes' ? 'Mark as unread' : 'Mark as read';
         markReadButton.addEventListener("click", () => {
             if (myLibrary[index].read === "yes") {
@@ -25,6 +26,7 @@ function showBooks() {
                 showBooks();
         });
         const removeButton = document.createElement('button');
+        removeButton.classList.add('remove-button');
         removeButton.textContent = 'Remove Book';
         removeButton.addEventListener("click", () => {
             myLibrary.splice(index, 1);
