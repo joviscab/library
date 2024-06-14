@@ -13,8 +13,8 @@
     <h1>My Library</h1>
 
     <div>
-        <dialog>
-            <button autofocus>Close</button>
+        <dialog id="dialog-section">
+            <button id="close-button" autofocus>Close</button>
             <p>Add a new book:</p>
             <form id="book-form">
                 <div>
@@ -31,11 +31,14 @@
                 </div>
                 <div>
                     <p>Have you read this book?</p>
-                    <input type="radio" name="book-read" id="book-read-yes" value="yes" required>
-                    <label for="book-read-yes">Yes</label><br>
-                    <input type="radio" name="book-read" id="book-read-no" value="no">
-                    <label for="book-read-no">No</label><br>
+                    <div id="radio-buttons">
+                        <input type="radio" name="book-read" id="book-read-yes" value="yes" required>
+                        <label for="book-read-yes">Yes</label><br>
+                        <input type="radio" name="book-read" id="book-read-no" value="no">
+                        <label for="book-read-no">No</label><br>
+                    </div>
                 </div>
+                <br>
                 <button type="submit" id="submitNewBook">Submit</button>
             </form>
         </dialog>

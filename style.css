@@ -31,10 +31,11 @@ body > h1 {
 #showDialogButton {
   background-color: #412728dd;
   color: #f9f871;
-  border-radius: 15px;
+  border-radius: 10px;
   border: transparent;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 800;
+  cursor: pointer;
 }
 
 #showDialogButton:hover {
@@ -49,10 +50,12 @@ body > h1 {
 #libraryList {
   font-size: 1.5rem;
   color: #e2b659;
-  background-color: #412728d1;
+  background-color: #412728f0;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  border-radius: 10px;
+  
 }
 
 .mark-button {
@@ -63,6 +66,7 @@ body > h1 {
   font-size: 1.5rem;
   font-weight: 800;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .remove-button {
@@ -73,6 +77,7 @@ body > h1 {
   font-size: 1.5rem;
   font-weight: 800;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 #close-button {
@@ -83,6 +88,7 @@ body > h1 {
   font-size: 1.5rem;
   font-weight: 800;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 #submitNewBook {
@@ -92,6 +98,31 @@ body > h1 {
   border: transparent;
   font-size: 1.5rem;
   font-weight: 800;
-  margin-left: 10px;
+  cursor: pointer;
+  display: flex;
+  margin-left: 115px;
+}
+
+#dialog-section {
+  font-size: 1.5rem;
+  color: #e2b659;
+  background-color: #412728d1;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#dialog-section[open] {
+  visibility: visible;
+  opacity: 1;
+}
+
+#radio-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
