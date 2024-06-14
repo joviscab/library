@@ -13,37 +13,34 @@
         <dialog>
             <button autofocus>Close</button>
             <p>Add a new book:</p>
-            <div id="book-form">
-                <label for="book-title">Book Title</label>
-                <input type="text" id="book-title" name="book-title">
-            </div>
-            <div>
-                <label for="book-author">Book Author</label>
-                <input type="text" id="book-author" name="book-author">
-            </div>
-            <div>
-                <label for="book-pages">Number of pages</label>
-                <input type="number" id="book-pages" name="book-pages">
-            </div>
-            <div>
-                <form action="">
+            <form id="book-form">
+                <div>
+                    <label for="book-title">Book Title</label>
+                    <input type="text" id="book-title" name="book-title" required>
+                </div>
+                <div>
+                    <label for="book-author">Book Author</label>
+                    <input type="text" id="book-author" name="book-author" required>
+                </div>
+                <div>
+                    <label for="book-pages">Number of pages</label>
+                    <input type="number" id="book-pages" name="book-pages" required>
+                </div>
+                <div>
                     <p>Have you read this book?</p>
-                    <input type="radio" name="book-read" id="book-read-yes" value="Yes"><br>
+                    <input type="radio" name="book-read" id="book-read-yes" value="yes" required>
                     <label for="book-read-yes">Yes</label><br>
-                    <input type="radio" name="book-read" id="book-read-no" value="No"><br>
+                    <input type="radio" name="book-read" id="book-read-no" value="no">
                     <label for="book-read-no">No</label><br>
-                </form>
-            </div>
-            <button type="submit" id="submitNewBook">Submit</button>
-          </dialog>
-          <button id="showDialogButton">New Book</button>
-          
+                </div>
+                <button type="submit" id="submitNewBook">Submit</button>
+            </form>
+        </dialog>
+        <button id="showDialogButton">New Book</button>
     </div>
 
-    <ul id="libraryList">
+    <ul id="libraryList"></ul>
 
-    </ul>
-
-    <script src="script.js" ></script>
+    <script src="script.js"></script>
 </body>
 </html>

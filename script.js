@@ -13,10 +13,16 @@ function showBooks() {
         const li = document.createElement('li');
         li.textContent = `${book.title}, by ${book.author}, with ${book.pages} pages. The book was read: ${book.read}.`;
         const markReadButton = document.createElement('button');
-        markReadButton.textContent = 'Mark as read';
+        markReadButton.textContent = book.read === 'yes' ? 'Mark as unread' : 'Mark as read';
         markReadButton.addEventListener("click", () => {
-            myLibrary[3] = "yes";
-            showBooks();
+            if (myLibrary[index].read === "yes") {
+                myLibrary[index].read = 'no';
+                markReadButton.textContent = 'Mark as read';
+            } else {
+                myLibrary[index].read = 'yes';
+                markReadButton.textContent = 'Mark as unread';
+            }
+                showBooks();
         });
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Remove Book';
