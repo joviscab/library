@@ -55,7 +55,6 @@ body > h1 {
   flex-direction: column;
   gap: 20px;
   border-radius: 10px;
-  
 }
 
 .mark-button {
@@ -123,6 +122,6 @@ body > h1 {
 #radio-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
 }
 
